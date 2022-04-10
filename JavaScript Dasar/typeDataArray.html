@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Array</h1>
+        
+        
+        <script>
+           const names = []
+           names.push("Yoga");
+           names.push("Julian", "Prasutiyo");
+           names.push("Raffa", "Mila", "Ula");
+
+           console.table(names);
+
+           console.info(names[0]);
+           console.info(names[1]);
+           console.info(names[2]);
+
+           //ganti value
+           names[0]="Semangat";
+           names[1]="Belajar";
+           names[2]="Praktek S";
+           console.table(names);
+
+           delete names[3];
+           console.table(names);
+
+           names.push("Yoga lagi");
+           console.table(names);
+
+           names[3] ="diupdate lagi";
+           console.table(names);
+
+           names.push(1,2,3,4,5);
+           names.push(["Yoga","Julian","Prasutiyo"]);
+           console.table(names);
+
+        </script>
+    </body>
+</html>

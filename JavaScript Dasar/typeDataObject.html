@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Object</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Object</h1>
+        
+        <script>
+            const biodata = {
+                nama : "Yoga Julian ",
+                alamat : "Indonesia",
+                "No rumah":80,
+            };
+
+            //ubah property / attribute
+            // biodata["Nama"] = "Yoga Julian Prasutiyo";
+            // biodata["Alamat"] = "Indonesia";
+            // biodata["No rumah"]= 79;
+
+            console.info(`Nama : ${biodata.nama}`);
+            console.info(`Alamat : ${biodata.alamat}`);
+            console.info(`Nomor Rumah : ${biodata["No rumah"]}`);
+
+
+            console.table(biodata);
+           
+            delete biodata["No rumah"];
+            console.table(biodata);
+
+        </script>
+    </body>
+</html>
