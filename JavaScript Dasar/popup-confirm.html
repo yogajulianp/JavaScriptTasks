@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>confirm popup</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>PopUp confirm</h1>
+        
+        <script>
+
+            const gabung = confirm("Anda yakin ingin bergabung?")
+
+            if (gabung) {
+                const name = prompt("Baik, siapa nama kamu?")
+                alert(`Selamat datang ${name}`)
+            } else {
+                alert("Bye-bye")
+            }
+
+        </script>
+    </body>
+</html>
