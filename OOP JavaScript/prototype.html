@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>prototype</h1>
+        
+        <script>
+
+            //construction function , merupakan class pada javaScript, ini juga merupakan prototype
+            function PersonData(namaDepan, namaAkhir){
+                this.firstName = namaDepan;
+                this.lastName = namaAkhir;
+                this.sayGreeting = function (name) {
+                console.log(`Hallo, selamat datang ${name}, nama saya ${this.firstName} ${this.lastName}.`)
+                }
+            }
+
+            PersonData.prototype.sayBye= function(){
+                console.log("sampai jumpa")
+            }
+
+            PersonData.prototype.run = function() {
+                console.log(`${this.firstName} sedang dijalankan`)
+            }
+
+            //membuat object dari constructor, cukup new pada pemanggilan constructor, nama object ini adalah instance
+            const yoga = new PersonData("Yoga", "Prasutiyo");
+            const mila = new PersonData("Mila","Tina");
+
+            console.log(yoga);
+            console.log(mila);
+
+            yoga.sayBye();
+            yoga.run();
+
+        </script>
+    </body>
+</html>
+
