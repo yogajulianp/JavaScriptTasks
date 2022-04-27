@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Super : Private Field</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Super : Private Field</h1>
+        
+        <script>
+            class Hitung{
+                #hitung = 0;
+
+                increment(){
+                    this.#hitung++;
+                }
+
+                decrement(){
+                    this.#hitung--;
+                }
+
+                get(){
+                    return this.#hitung;
+                }
+            }
+           
+            const hitung = new Hitung();
+            
+            console.log(hitung);
+
+            hitung.increment();
+            hitung.increment();
+            hitung.increment();
+           
+            console.log(hitung.get());
+            hitung.hitung = 100;
+            //hitung.#hitung = 100;
+            console.log(hitung);
+
+        </script>
+    </body>
+</html>
+

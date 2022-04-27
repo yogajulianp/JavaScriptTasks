@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Super Constructor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Super Constructor</h1>
+        
+        <script>
+            class KepalaCabang {
+                constructor(firstName) {
+                    this.firstName = firstName;
+                }
+
+                sayGreeting(name) {
+                    console.info(`Hallo ${name}, saya adalah ${this.firstName} kepala cabang Warungkiara`);
+                }
+            }
+
+            class AreaManager extends KepalaCabang {
+                constructor(firstName, lastName){
+                    super(firstName);
+                    this.lastName = lastName;
+                }
+
+                sayGreeting(name) {
+                    console.info(`Hallo ${name}, saya adalah ${this.firstName} ${this.lastName} Area Manager Sukabumi`);
+                }
+            }
+
+            const budi = new KepalaCabang("Budi");      
+            budi.sayGreeting("Joko");
+
+            const yoga = new AreaManager("Yoga", "Prasutiyo");
+            yoga.sayGreeting("Joko");
+
+            console.log(budi);
+            console.log(yoga);
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Super : Private Method</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Super : Private Method</h1>
+        
+        <script>
+            
+            class Penduduk{
+
+                katakan(name){
+                    if (name) {
+                        this.#katakanWithName(name);
+                    } else {
+                        this.#katakanWithoutName();
+                    }
+                }
+
+                #katakanWithName(name){
+                    console.log(`Hallo ${name}, selamat datang`);
+                }
+
+                #katakanWithoutName(){
+                    console.log("Hallo, selamat datang");
+                }
+            }
+
+            const penduduk = new Penduduk()
+            console.log(penduduk)
+
+            penduduk.katakan("Yoga");
+            
+            penduduk.#katakanWithoutName()
+
+        </script>
+    </body>
+</html>
+

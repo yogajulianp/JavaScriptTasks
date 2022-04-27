@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Class: Getter Setter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Class : Getter Setter</h1>
+        
+        <script>
+            class Author {
+                constructor(firstName, lastName) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+
+                get fullName(){
+                    return `${this.firstName} ${this.lastName}`
+                }
+
+                set fullName(nameInput){
+                    const resutl = nameInput.split(" ");
+                    this.firstName = resutl[0];
+                    this.lastName = resutl[1];
+                }
+            }
+
+            const yoga = new Author("Yoga", "Julian");
+            console.log(yoga);
+            console.log(yoga.fullName);
+
+            yoga.fullName = "Muzdahir Prasutiyo";
+            console.log(yoga);
+         
+
+        </script>
+    </body>
+</html>
+

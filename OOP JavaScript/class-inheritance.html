@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Class inheritance</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Class inheritance</h1>
+        
+        <script>
+            class KepalaCabang {
+                // constructor(name) {
+                //     this.name = name;
+                // }
+
+                sayGreeting(name) {
+                    console.info(`Hallo ${name}, saya adalah ${this.name} kepala cabang Warungkiara`);
+                }
+            }
+
+            class AreaManager extends KepalaCabang {
+                sayGreeting(name) {
+                    console.info(`Hallo ${name}, saya adalah ${this.name} Area Manager Sukabumi`);
+                }
+            }
+
+            const budi = new KepalaCabang();
+            budi.name="Budi";
+            budi.sayGreeting("Joko");
+
+            const yoga = new AreaManager();
+            yoga.name="Yoga Julian";
+            yoga.sayGreeting("Joko");
+
+            console.log(budi);
+            console.log(yoga);
+
+
+        </script>
+    </body>
+</html>
+

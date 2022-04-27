@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Super : Public Field</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Super : Public Field</h1>
+        
+        <script>
+
+            class User {
+                firstName;
+                lastName;
+                balance=0
+
+                constructor(firstName, lastName){
+                    this.firstName = firstName;
+                    this.lastName = lastName
+                }
+
+                sayGreeting(){
+
+                }
+            }
+
+            const yoga = new User("Yoga Julian", "Prasutiyo");
+            console.log(yoga);
+           
+        </script>
+    </body>
+</html>
+
