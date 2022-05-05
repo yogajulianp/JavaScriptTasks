@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Static Field</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Static Field</h1>
+        
+        <script>
+           class Courses {
+                static name = "Fisika";
+                static version = 1.0;
+                static author = "Yoga Julian Prasutiyo"
+           }
+
+           const course = new Courses();
+           //console.log(course);
+           console.log(course.name);  //hasil undefine, karena data static tidak ke object, tapi ke class nya
+           
+           Courses.version = 2.2;
+
+           console.log(Courses.name);
+           console.log(Courses.version);
+           console.log(Courses.author);
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Error handling</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Error handling</h1>
+        
+        <script>
+            class MathSum {
+                static sum(...banyakAngka){
+
+                    if (banyakAngka.length===0) {
+                        throw new Error("Parameter harus diisi dan lebih dari 0")
+                    }
+
+                    let total=0;
+                    for (const angka of banyakAngka) {
+                        total += angka;
+                    }
+                    return total;
+                }
+            }
+
+            try {
+                const test = MathSum.sum()
+                console.log(test)
+                console.log("Yoga")
+            } catch (error) {
+                console.log(`Terjadi error berupa: ${error.message}`)
+            } finally {
+                console.log("Program Selesai")
+            }
+            
+
+            const jumlah = MathSum.sum(1, 1,2,3,4,5,6,7)
+            console.info(jumlah)
+
+            class Counter {
+                #counter = 1;
+
+                next() {
+                    try {
+                        return this.#counter;
+                    } finally {
+                        this.#counter++;
+                    }
+                }
+            }
+
+            const counter = new Counter();
+            console.log(counter.next());
+            console.log(counter.next());
+            console.log(counter.next());
+            console.log(counter.next());
+            console.log(counter.next());
+
+        </script>
+    </body>
+</html>
+

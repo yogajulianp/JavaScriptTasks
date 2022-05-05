@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Operator instanceof</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Operator instanceof</h1>
+        
+        <script>
+           class Penduduk{
+ 
+           }
+
+           class Walikota extends Penduduk{
+
+           }
+
+           const tiyo = new Penduduk();
+           const yoga = new Walikota();
+
+           console.info(typeof tiyo);
+           console.log(typeof yoga);
+
+           console.log(tiyo instanceof Penduduk);
+           console.log(tiyo instanceof Walikota);
+
+           console.log(yoga instanceof Penduduk);
+           console.log(yoga instanceof Walikota);
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Iterable Iterator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Iterable Iterator</h1>
+        
+        <script>
+            class CounterIteratorResult {
+                constructor(value, done) {
+                    this.value = value;
+                    this.done = done;
+                }
+            }
+
+            class CounterIterator {
+                constructor(value, max) {
+                    this.value = value;
+                    this.max = max
+                }
+
+                next() {
+                    try {
+                        if (this.value > this.max){
+                            return new CounterIteratorResult(this.value, true);
+                        } else {
+                            return new CounterIteratorResult(this.value, false);
+                        }
+                    } finally {
+                        this.value++;
+                    }
+                }
+            } 
+
+            //membuat Counter iterable
+            class Counter {
+                constructor(value, max) {
+                    this.value = value;
+                    this.max = max;
+                }
+
+                [Symbol.iterator]() {
+                    return new CounterIterator(this.value, this.max)
+                }
+            }
+
+            //menggunakan Counter iterable
+            const counter = new Counter(1, 15)
+            for (const element of counter) {
+                console.log(element);
+            }
+
+
+        </script>
+
+    </body>
+</html>
+
