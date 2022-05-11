@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alias</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        
+    </head>
+    <body>
+        <h1>Alias</h1>
+  
+        
+        <script type="module" >
+            import {product, plus, Product} from "./scripts/multiple.js"
+            import {product as produk, plus as tambah, Product as Produk} from "./scripts/multiple.js"
+            
+            console.log(product)
+            console.log(produk)
+
+            console.log(plus(15,40));
+            console.log(tambah(15,50));
+
+            const barang = new Product();
+            console.log(barang)
+
+            const barang2 = new Produk();
+            console.log(barang2)
+        </script>
+    </body>
+</html>

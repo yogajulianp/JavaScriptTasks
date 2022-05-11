@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Module Object</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Module Object </h1>
+                
+        <script type="module">
+        import * as yoga from "./scripts/module-object.js";
+
+        console.log(yoga.firstName);
+        console.log(yoga.middleName);
+        console.log(yoga.lastName);
+
+        yoga.greeting();
+
+        const author = new yoga.People();
+        console.log(author);
+
+        </script>
+    </body>
+</html>

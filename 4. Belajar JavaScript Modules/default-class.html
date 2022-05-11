@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Default class</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Default class</h1>
+        
+        <script type="module">
+            import classDefault from "./scripts/default-class.js"
+            //import {default as classDefault} from "./scripts/default-class.js"
+
+            const greeting = new classDefault("Yoga Julian")
+            console.log(greeting)
+
+            greeting.sayHello();
+
+        </script>
+    </body>
+</html>
